@@ -160,12 +160,11 @@ jobs:
         pip-compile examples/requirements/${{ matrix.requirements }}.in
         pip-compile examples/requirements/elastic_${{ matrix.es-version }}x.in
         pip-compile examples/requirements/test.in
-        python -m pip install -r examples/requirements/elastic_${{ matrix.es-version }}x.txt
         python -m pip install -r examples/requirements/test.txt
     - name: Run tests ${{ matrix.tox_env }}
       uses: nick-invision/retry@v2
       with:
-        command: tox -e ${{ matrix.tox_env }} -- --color yes
+        command: tox -r -e ${{ matrix.tox_env }} -- --color yes
         timeout_minutes: 15
         max_attempts: 3
     - name: Upload to Codecov
