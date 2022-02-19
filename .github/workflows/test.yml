@@ -22,27 +22,27 @@ jobs:
 
         - python-version: 3.7
           es-version: '7'
-          tox_env: py36-django{22,31,32}-elasticsearch7
+          tox_env: py37-django{22,31,32}-elasticsearch7
 
         - python-version: 3.7
           es-version: '6'
-          tox_env: py36-django{22,31,32}-elasticsearch6
+          tox_env: py37-django{22,31,32}-elasticsearch6
 
         - python-version: 3.8
           es-version: '7'
-          tox_env: py36-django{22,31,32,40}-elasticsearch7
+          tox_env: py38-django{22,31,32,40}-elasticsearch7
 
         - python-version: 3.8
           es-version: '6'
-          tox_env: py36-django{22,31,32}-elasticsearch6
+          tox_env: py38-django{22,31,32}-elasticsearch6
 
         - python-version: 3.9
           es-version: '7'
-          tox_env: py36-django{22,31,32,40}-elasticsearch7
+          tox_env: py39-django{22,31,32,40}-elasticsearch7
 
         - python-version: 3.9
           es-version: '6'
-          tox_env: py36-django{22,31,32}-elasticsearch6
+          tox_env: py39-django{22,31,32}-elasticsearch6
 
         - python-version: 3.10
           es-version: '7'
