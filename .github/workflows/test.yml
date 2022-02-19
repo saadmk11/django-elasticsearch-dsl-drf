@@ -75,7 +75,7 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         pip install pip-tools
         python -m pip install tox
-    - name: Run tests ${{ matrix.tox_env }}
+    - name: Run tests
       uses: nick-invision/retry@v2
       with:
         command: tox -r -e '${{ matrix.tox_env }}' -- --color yes
