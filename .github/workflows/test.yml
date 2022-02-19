@@ -138,7 +138,7 @@ jobs:
         python -m pip install -r examples/requirements/${{ matrix.requirements }}.txt
         python -m pip install -r examples/requirements/elastic_${{ matrix.es-version }}x.txt
         python -m pip install -r examples/requirements/test.txt
-    - name: Run tests
+    - name: Run tests ${{ matrix.tox_env }}
       uses: nick-invision/retry@v2
       with:
         command: tox -e ${{ matrix.tox_env }} -- --color yes
