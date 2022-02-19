@@ -163,7 +163,7 @@ jobs:
     - name: Run tests ${{ matrix.tox_env }}
       uses: nick-invision/retry@v2
       with:
-        command: tox -r -e ${{ matrix.tox_env }} -- --color yes
+        command: tox -r -e '${{ matrix.tox_env }}' -- --color yes
         timeout_minutes: 15
         max_attempts: 3
     - name: Upload to Codecov
